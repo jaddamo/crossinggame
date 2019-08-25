@@ -60,18 +60,18 @@
 		
 		var loadSprites = function() {
 			sprites.player = new Image();
-			sprites.player.src = '/images/hero.png';
-			lukewarm513/crossinggame
+			sprites.player.src = 'images/hero.png';
+			
 			sprites.background = new Image();
-			sprites.background.src = '/images/floor.png';
+			sprites.background.src = 'images/floor.png';
 			
 			sprites.enemy = new Image();
-			sprites.enemy.src = '/images/enemy.png';
+			sprites.enemy.src = 'images/enemy.png';
 			
 			
 			sprites.goal = new Image();
-			sprites.goal.src = '/images/chest.png';
-		};
+			sprites.goal.src = 'images/chest.png';
+		}
 		
 
 		document.onkeydown = function(event) {
@@ -90,13 +90,13 @@
 		document.onkeyup=function(event) {
 			player.speed = 0;
 			player.ySpeed = 0;
-		};
+		}
 
 		var checkCollisions = function(rect1, rect2) {
 			var xOverlap = Math.abs(rect1.x - rect2.x) <= Math.max(rect1.width, rect2.width);
 			var yOverlap = Math.abs(rect1.y - rect2.y) <= Math.max(rect1.height, rect2.height);
 			return xOverlap && yOverlap;
-		};
+		}
 
 		var draw = function() {
 			ctx.clearRect(0, 0, screenWidth, screenHeight);
@@ -118,7 +118,7 @@
 				//ctx.fillStyle = element.color;
 				//ctx.fillRect(element.x, element.y, element.width, element.height);
 			});
-		};
+		}
 
 		var update = function() {
 
@@ -135,7 +135,7 @@
 			
 			player.moveHorizontally();
 			player.moveUpDown();
-		};
+		}
 
 		var endGameLogic = function(text) {
 			isGameLive = false;
